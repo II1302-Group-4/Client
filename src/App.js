@@ -1,19 +1,18 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getCurrentData } from './redux/actions/currentDataActions'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Component from './components/Component'
+import ExampleComponents from './components/ExampleComponents'
 
 const App = () => {
 
-  const dispatch = useDispatch();
-  const currentData = useSelector(state => state.currentData)
 
   return (
-    <>
-      <h1>Pollusense</h1>
-      <button onClick={() => { dispatch(getCurrentData()) }}>Get latest reading with a server call</button>
-      {currentData.loadingCurrentData ? <h2>Loading data...</h2> : <h2>{currentData.currentData}</h2>}
-    </>
-
+    <BrowserRouter>
+      <Routes >
+        <Route exact path="/" element={<Component />} />
+        <Route path="/test" element={<ExampleComponents />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
