@@ -1,5 +1,12 @@
 import axios from 'axios'
 
-const devUrl = "http://localhost:5000/data"
-const deployedUrl = "http://pollusenseserver.azurewebsites.net/"
-export const getCurrentData = () => axios.get(deployedUrl)
+let url;
+
+if (process.env.NODE_ENV === 'development') {
+    url = "http://localhost:5000/data"
+}
+else {
+    url = "http://pollusenseserver.azurewebsites.net/data"
+}
+
+export const getCurrentData = () => axios.get(url)
