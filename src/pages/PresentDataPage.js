@@ -1,12 +1,14 @@
 import React from 'react'
 import TaskBar from '../components/TaskBar'
-import GetDataButton from '../components/GetDataButton'
-
+import CurrentData from '../components/CurrentData'
 const Homepage = () => {
     return (
         <>
-        <TaskBar />,
-            <GetDataButton/>
+            <TaskBar />
+            <div className="d-flex justify-content-center">
+                <CurrentData />
+
+            </div>
         </>
     )
 }
