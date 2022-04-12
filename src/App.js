@@ -12,8 +12,7 @@ const App = () => {
 
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/presentdata" element={<PresentDataPage />} />
-
+        <Route path="/presentdata" element={<PresentDataPage />} />
         {/* example page route
         <Route path="/user" element={<UserPage/>} /> */}
 
