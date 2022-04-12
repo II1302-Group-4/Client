@@ -1,9 +1,8 @@
 import React from 'react'
-import ExampleComponent from '../components/ExampleComponent'
 
 const Homepage = () => {
     return (
-        <ExampleComponent />
+        <div></div>
     )
 }
 
