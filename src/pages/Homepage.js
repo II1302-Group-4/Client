@@ -1,9 +1,12 @@
 import React from 'react'
-import ExampleComponent from '../components/ExampleComponent'
+import CurrentData from '../components/CurrentData'
 
 const Homepage = () => {
     return (
-        <ExampleComponent />
+        <>
+            <h1>Pollusense</h1>
+            <CurrentData />
+        </>
     )
 }
 
