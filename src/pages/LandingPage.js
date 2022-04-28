@@ -1,10 +1,11 @@
 import React from 'react'
-import Logo from '../components/Logo'
+import Landing from '../components/Landing'
 const LandingPage = () => {
     return (
         <>
             <div className="d-flex justify-content-center">
-                <Logo />
+                <Landing />
+              
             </div>
         </>
     )

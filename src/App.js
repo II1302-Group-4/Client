@@ -9,7 +9,6 @@ import TaskBar from './components/TaskBar'
 const App = () => {
   return (
     <BrowserRouter>
-      <TaskBar />
 
       <Routes>
         <Route exact path="/" element={<Homepage />} />
