@@ -12,9 +12,7 @@ const App = () => {
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/data" element={<PresentValue />} />
       </Routes>
-
     </BrowserRouter>
-
   )
 }
 

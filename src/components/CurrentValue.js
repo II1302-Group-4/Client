@@ -5,9 +5,6 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { getCurrentData } from "../redux/actions/currentDataActions"
 import { useDispatch, useSelector } from 'react-redux'
 
-
-
-
 const CurrentValue = () => {
   const textColor = '#AAA'
 
@@ -17,10 +14,9 @@ const CurrentValue = () => {
   useEffect(() => {
     dispatch(getCurrentData())
   }, [])
+
   return (
     <>
-
-
       {currentData.loadingCurrentData ? <h2>Loading data...</h2> :
         <div className="margin">
           <h2 class="text-center">Data readings</h2>
@@ -44,14 +40,14 @@ const CurrentValue = () => {
 
                   needleHeightRatio={0.8}
                   needleColor="steelblue"
-                  value={currentData?.currentData?.value}
+                  value={currentData?.currentData?.VOC?.value}
                   startColor="green"
                   endColor="red"
                   textColor={textColor}
                   labelFontSize={'13px'}
                   valueTextFontSize={'16px'}
 
-                  currentValueText={'VOC value: ${value}'}
+                  currentValueText={`VOC value: ${currentData?.currentData?.VOC?.value} ${currentData?.currentData?.VOC?.unit}`}
                   needleTransition="easeElastic"
 
                 />
@@ -71,14 +67,14 @@ const CurrentValue = () => {
 
                   needleHeightRatio={0.8}
                   needleColor="steelblue"
-                  value={30}
+                  value={currentData?.currentData?.CO2?.value}
                   startColor="green"
                   endColor="red"
                   textColor={textColor}
                   labelFontSize={'13px'}
                   valueTextFontSize={'16px'}
 
-                  currentValueText={'VOC value: ${value}'}
+                  currentValueText={`CO2 value: ${currentData?.currentData?.CO2?.value} ${currentData?.currentData?.CO2?.unit}`}
                   needleTransition="easeElastic"
 
                 />
