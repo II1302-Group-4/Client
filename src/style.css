@@ -7,3 +7,37 @@
     height:20%;
     width: auto;
 }
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #152B39;
+    font-family: Courier, monospace;
+    font-size: 14px;
+    color:#ccc; 
+  }
+  
+  .wrapper {
+    display: block;
+    margin: 5em auto;
+    border: 1px solid #555;
+    width: 700px;
+    height: 350px;
+    position: relative;
+  }
+  
+  .p{text-align:center;
+}
+
+  .chartSize{
+    width: 600px;
+    height: 500px;
+  }
+
+  .margin{
+    margin-top: 80px;
+  }
+
+.fat{
+  font-weight:bold;
+
+}

@@ -12,7 +12,7 @@ return(
   <div className= "margin">
     <h2 class="text-center">Data readings</h2>
 
-      <div class="border border-secondary border-2">
+      <div >
 
       <div class="row d-flex justify-content-center" >
       <p> </p>
@@ -23,11 +23,11 @@ return(
             }} class=" d-flex justify-content-center">
               
           <ReactSpeedometer
-           maxValue={500}
-           
+           maxValue={1000}
+           minValue={0}
            fluidWidth={true}
            maxSegmentLabels={5}
-           segments={5555}
+           segments={3000}
           
            needleHeightRatio={0.8}
            needleColor="steelblue"
@@ -35,13 +35,11 @@ return(
            startColor="green"
            endColor="red"
            textColor={textColor}
-           labelFontSize={'100px'}
-           valueTextFontSize={'30px'}
-           valueTextFontWeight={'500'}
+           labelFontSize={'13px'}
+           valueTextFontSize={'16px'}
+           
            currentValueText={'VOC value: ${value}'}
            needleTransition="easeElastic" 
-
-           
           
         />
         </div>
@@ -52,23 +50,22 @@ return(
             }} >
 
       <ReactSpeedometer
-          maxValue={500}
-          fluidWidth={true}
+          maxValue={1000}
           minValue={0}
+          fluidWidth={true}
           maxSegmentLabels={5}
-          segments={5555}
-       
+          segments={3000}
+         
           needleHeightRatio={0.8}
           needleColor="steelblue"
-          value={490}
+          value={30}
           startColor="green"
           endColor="red"
-          midColor="purple"
           textColor={textColor}
-          labelFontSize={'20px'}
-          valueTextFontSize={'30px'}
-          valueTextFontWeight={'500'}
-          currentValueText={'CO2 value: ${value}'}
+          labelFontSize={'13px'}
+          valueTextFontSize={'16px'}
+          
+          currentValueText={'VOC value: ${value}'}
           needleTransition="easeElastic" 
 
   />
