@@ -1,6 +1,7 @@
 const initialState = {
     currentData: null,
-    loadingCurrentData: false
+    loadingCurrentData: false,
+    currentDataError: null
 }
 
 const currentDataReducer = (state = initialState, action) => {
@@ -15,6 +16,12 @@ const currentDataReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loadingCurrentData: true
+            }
+        case 'setCurrentDataError':
+            return {
+                ...state,
+                loadingCurrentData: false,
+                currentDataError: action.payload
             }
         default:
             return state

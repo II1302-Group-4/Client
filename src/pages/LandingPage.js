@@ -5,7 +5,7 @@ const LandingPage = () => {
         <>
             <div className="d-flex justify-content-center">
                 <Landing />
-              
+
             </div>
         </>
     )

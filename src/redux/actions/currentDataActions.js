@@ -7,6 +7,7 @@ export const getCurrentData = () => async (dispatch) => {
         dispatch({ type: 'setCurrentData', payload: data })
     }
     catch (err) {
+        dispatch({ type: 'setCurrentDataError', payload: err })
         console.log(err)
     }
 }
