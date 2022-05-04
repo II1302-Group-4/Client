@@ -1,5 +1,3 @@
-
-
 describe("The landing page", () => {
 
     it("successfully loads", () => {
