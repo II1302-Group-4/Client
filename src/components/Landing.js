@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../utils/img/LOGO2.png"
+import { Link } from 'react-router-dom'
 const Landing = () => {
     return (
         <>
@@ -11,7 +12,9 @@ const Landing = () => {
                     <div class="text-center my-4">
                         <input type="email" class="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputEmail" placeholder="name@kth.se" />
                         <input type="password" class="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputPassword" placeholder="*******" />
-                        <button type="submit" class="btn btn-outline-secondary ">LOGIN</button>
+                        <Link to="/data">
+                            <button type="submit" className="btn btn-outline-secondary" id="loginButton">LOGIN</button>
+                        </Link>
                     </div>
                 </form>
 

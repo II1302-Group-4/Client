@@ -39,5 +39,20 @@ describe("the redux store", () => {
             }
         })
     })
+
+    it('can dispatch a setCurrentDataError action and update the store', () => {
+        cy.visit('/')
+        cy
+            .window()
+            .its('store')
+            .invoke('dispatch', { type: 'setCurrentDataError', payload: "error" })
+        cy.window().its('store').invoke('getState').should('deep.equal', {
+            currentData: {
+                currentData: null,
+                loadingCurrentData: false,
+                currentDataError: "error"
+            }
+        })
+    })
 })
 
