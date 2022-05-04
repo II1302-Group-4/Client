@@ -4,7 +4,8 @@ describe("the redux store", () => {
         cy.window().its('store').invoke('getState').should('deep.equal', {
             currentData: {
                 currentData: null,
-                loadingCurrentData: false
+                loadingCurrentData: false,
+                currentDataError: null
             }
         })
     })
@@ -18,7 +19,8 @@ describe("the redux store", () => {
         cy.window().its('store').invoke('getState').should('deep.equal', {
             currentData: {
                 currentData: null,
-                loadingCurrentData: true
+                loadingCurrentData: true,
+                currentDataError: null
             }
         })
     })
@@ -32,7 +34,8 @@ describe("the redux store", () => {
         cy.window().its('store').invoke('getState').should('deep.equal', {
             currentData: {
                 currentData: 5,
-                loadingCurrentData: false
+                loadingCurrentData: false,
+                currentDataError: null
             }
         })
     })

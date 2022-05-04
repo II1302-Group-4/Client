@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { getCurrentData } from "../redux/actions/currentDataActions"
 import { useDispatch, useSelector } from 'react-redux'
+import ClipLoader from "react-spinners/ClipLoader";
 
 const CurrentValue = () => {
   const textColor = '#AAA'
@@ -17,7 +18,7 @@ const CurrentValue = () => {
 
   return (
     <>
-      {currentData.loadingCurrentData ? <h2>Loading data...</h2> :
+      {currentData.loadingCurrentData ? <ClipLoader /> :
         <div className="margin">
           <h2 class="text-center">Data readings</h2>
 

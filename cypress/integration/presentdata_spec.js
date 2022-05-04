@@ -7,8 +7,8 @@ describe("The data page", () => {
     })
 
 
-    it("contains the correct button", () => {
-        cy.visit("/presentdata")
-        cy.get("button").should("contain", "Get latest reading")
-    })
+    // it("contains the correct button", () => {
+    //     cy.visit("/presentdata")
+    //     cy.get("button").should("contain", "Get latest reading")
+    // })
 })
