@@ -15,7 +15,9 @@ const currentDataReducer = (state = initialState, action) => {
         case 'startCurrentData':
             return {
                 ...state,
-                loadingCurrentData: true
+                loadingCurrentData: true,
+                currentData: null,
+                currentDataError: null
             }
         case 'setCurrentDataError':
             return {

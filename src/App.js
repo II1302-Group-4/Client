@@ -3,6 +3,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import PresentValue from './pages/PresentValue'
+import AboutPage from './pages/AboutPage'
+import HowToPage from './pages/HowToPage'
 
 
 const App = () => {
@@ -10,7 +12,9 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route path="/data" element={<PresentValue />} />
+        <Route path="/monitor" element={<PresentValue />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/how-to" element={<HowToPage />} />
       </Routes>
     </BrowserRouter>
   )

@@ -5,14 +5,14 @@ const Landing = () => {
     return (
         <>
             <div className="d-flex flex-column bd-highlight mt-5">
-                <img src={logo} class="img-fluid mx-auto logo" alt="PolluSense Logo" />
-                <h2 class="mb-4 text-center">The fast and simple way of checking for dangerous VOC levels</h2>
-                <hr class="my-5" />
+                <img src={logo} className="img-fluid mx-auto logo" alt="PolluSense Logo" />
+                <h2 className="mb-4 text-center">The fast and simple way of checking for dangerous VOC levels</h2>
+                <hr className="my-5" />
                 <form>
-                    <div class="text-center my-4">
-                        <input type="email" class="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputEmail" placeholder="name@kth.se" />
-                        <input type="password" class="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputPassword" placeholder="*******" />
-                        <Link to="/data">
+                    <div className="text-center my-4">
+                        <input type="email" className="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputEmail" placeholder="name@kth.se" />
+                        <input type="password" className="form-control formInput shadow-sm p-2 mb-4 bg-white rounded" id="InputPassword" placeholder="*******" />
+                        <Link to="/monitor">
                             <button type="submit" className="btn btn-outline-secondary" id="loginButton">LOGIN</button>
                         </Link>
                     </div>
