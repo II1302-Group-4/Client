@@ -6,7 +6,6 @@ import PresentValue from './pages/PresentValue'
 import AboutPage from './pages/AboutPage'
 import HowToPage from './pages/HowToPage'
 
-
 const App = () => {
   return (
     <BrowserRouter>

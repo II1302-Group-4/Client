@@ -1,13 +1,15 @@
 import React from 'react'
-import Landing from '../components/Landing'
+import Logo from '../components/Logo'
 import Login from '../components/Login'
+import Register from '../components/Register'
+
 const LandingPage = () => {
     return (
 
         <>
-            <div className="d-flex justify-content-center">
-                <Landing />
-
+            <div className="d-flex flex-column justify-content-center align-items-center image">
+                <Logo />
+                <Register/>
             </div>
         </>
     )
