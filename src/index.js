@@ -8,10 +8,24 @@ import "./style.css";
 import { Provider } from 'react-redux'
 import store from './redux/store'
 
+//Firebase
+import { ReactReduxFirebaseProvider } from "react-redux-firebase";
+import firebase from "./config/firebaseConfig"
+
+const rrfConfig = {
+}
+
+const rrfProps = {
+  firebase,
+  config: rrfConfig,
+  dispatch: store.dispatch
+}
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <ReactReduxFirebaseProvider {...rrfProps}>
+      <App/>
+    </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById('root')
 );

@@ -11,7 +11,7 @@ const CurrentValue = () => {
 
   const dispatch = useDispatch();
   const currentData = useSelector(state => state.currentData)
-
+  
   useEffect(() => {
     dispatch(getCurrentData())
   }, [])

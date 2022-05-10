@@ -1,8 +1,12 @@
 import React from 'react'
 import img from "../utils/img/LOGO1.png"
 import { Link } from 'react-router-dom'
+import { signOut } from '../redux/actions/authActions'
+import { useDispatch } from 'react-redux'
 
 const TaskBar = () => {
+    const dispatch = useDispatch();
+
     return (
         <>
             <div className="row p-3 bg-info text-white">
@@ -27,9 +31,7 @@ const TaskBar = () => {
                     </Link>
                 </div>
                 <div className="col-1 p-3">
-                    <Link to="/" id="logOutButtonLink">
-                        <button type="button" className="btn btn-outline-dark logInButton"> Log out </button>
-                    </Link>
+                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton"> Log out </button>
                 </div>
             </div>
         </>
