@@ -25,14 +25,14 @@
     height: auto;
     width: 30%;
 }
-
+/* 
 body {
     margin: 0;
     background: #152B39;
     font-family: Courier, monospace;
     font-size: 14px;
     color: #ccc;
-}
+} */
 
 .wrapper {
     display: block;
@@ -59,4 +59,12 @@ body {
 .fat {
     font-weight: bold;
 
+}
+
+.fillWindow {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
 }

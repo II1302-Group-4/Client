@@ -2,6 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Register = () => {
+
+    {/*
+    const [email, setEmail] = useState("");
+    onChange={(e) => setEmail(e.target.value)}
+    handleSubmit
+    */
+}
     return (
         <div className="text-center my-4">
             <form>
@@ -13,7 +20,6 @@ const Register = () => {
                         <button type="submit" className="btn btn-outline-light" id="loginButton">REGISTER</button>
                     </Link>
                 </div>
-                <Link to="/login" className="btn btn-link link-light m-2">Log in</Link>
             </form>
         </div>
 

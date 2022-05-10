@@ -8,6 +8,7 @@ import HowToPage from './pages/HowToPage'
 
 const App = () => {
   return (
+    <div className="fillWindow">
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/how-to" element={<HowToPage />} />
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 

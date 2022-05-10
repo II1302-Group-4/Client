@@ -12,7 +12,6 @@ const Login = () => {
                         <button type="submit" className="btn btn-outline-light" id="loginButton">LOGIN</button>
                     </Link>
                 </div>
-                <Link to="/register" className="btn btn-link link-light m-2">Register</Link>
             </form>
         </div>
 
