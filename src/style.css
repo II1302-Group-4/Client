@@ -25,6 +25,11 @@
     height: auto;
     width: 30%;
 }
+
+.error {
+    color: rgb(231, 23, 23);
+}
+
 /* 
 body {
     margin: 0;

@@ -10,6 +10,9 @@ export const signIn = (email, password) => {
                 dispatch({ 
                     type: "signinSuccess" })
             })
+            .then(() => {
+                window.location.pathname = "/monitor"
+            })
             .catch(e => {
                 dispatch({ 
                     type: "signinError", 
@@ -20,14 +23,21 @@ export const signIn = (email, password) => {
 
 export const signUp = (email, password) => {
     return (dispatch, getState, { getFirebase }) => {
-        dispatch({ type: "signupStart" })
+        dispatch({ 
+            type: "signupStart" })
+        
         const firebase = getFirebase()
+        
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(() => {
                 dispatch({ type: "signupSuccess" })
             })
+            .then(() => {
+                window.location.pathname = "/monitor"
+            })
             .catch(e => {
-                dispatch({ type: "signupError", payload: e.message })
+                dispatch({ type: "signupError", 
+                payload: e.message })
             })
     }
 }
@@ -39,6 +49,7 @@ export const signOut = () => {
         firebase.auth().signOut()
             .then(() => {
                 dispatch({ type: "signoutSuccess" })
+                window.location.pathname = "/"
             })
             .catch(e => {
                 dispatch({ type: "signoutError", payload: e.message })
