@@ -22,10 +22,20 @@ export const signIn = (email, password) => {
 }
 
 export const signUp = (email, password) => {
+    
+
     return (dispatch, getState, { getFirebase }) => {
         dispatch({ 
-            type: "signupStart" })
+            type: "signupStart" 
+        })
         
+        const split = email.split("@")
+        if(split[1] !== "kth.se") {
+            dispatch({
+                type: "signupError",
+                payload: "Register with username@kth.se"})
+            return
+        }
         const firebase = getFirebase()
         
         firebase.auth().createUserWithEmailAndPassword(email, password)
