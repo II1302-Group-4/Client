@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactSpeedometer from "react-d3-speedometer"
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { getCurrentData } from "../redux/actions/currentDataActions"
 import { useDispatch, useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
+import { Link } from 'react-router-dom'
 
 const CurrentValue = () => {
   const textColor = '#AAA'
-
+  const [timeMode, setTimeMode] = useState("Reading")
   const dispatch = useDispatch();
   const currentData = useSelector(state => state.currentData)
   
@@ -38,9 +39,11 @@ const CurrentValue = () => {
       </div>
     )
   }
+  
 
   return (
     <>
+
       <div className="margin">
         <h2 className="text-center">Data readings</h2>
         <div className="row d-flex justify-content-center" >
@@ -57,16 +60,17 @@ const CurrentValue = () => {
               segmentColors={['green', 'limegreen', 'gold', 'orange', 'tomato', 'firebrick']}
               needleHeightRatio={0.8}
               needleColor="steelblue"
-              value={currentData?.currentData?.CO2?.value}
+              value={currentData?.currentData?.CO2}
               startColor="green"
               endColor="red"
               textColor={textColor}
               labelFontSize={'13px'}
               valueTextFontSize={'16px'}
-              currentValueText={`CO2: ${currentData?.currentData?.CO2?.value} ${currentData?.currentData?.CO2?.unit}`}
+              currentValueText={`CO2: ${currentData?.currentData?.CO2} ppm`}
               needleTransition="easeElastic"
             />
           </div>
+
           <div style={{
             width: '500px',
             height: '300px',
@@ -81,26 +85,22 @@ const CurrentValue = () => {
               segmentColors={['green', 'gold', 'firebrick']}
               needleHeightRatio={0.8}
               needleColor="steelblue"
-              value={currentData?.currentData?.VOC?.value}
+              value={currentData?.currentData?.VOC}
               startColor="green"
               endColor="red"
               textColor={textColor}
               labelFontSize={'13px'}
               valueTextFontSize={'16px'}
-              currentValueText={`VOC: ${currentData?.currentData?.VOC?.value} ${currentData?.currentData?.VOC?.unit}`}
+              currentValueText={`VOC: ${currentData?.currentData?.VOC} ppb`}
               needleTransition="easeElastic"
             />
           </div>
         </div>
 
       </div>
-      <div className="btn-group btn-group-justified d-flex justify-content-center">
-        <ButtonGroup aria-label="Basic example">
-          <Button variant="secondary">Now</Button>
-          <Button variant="secondary">Week</Button>
-          <Button variant="secondary">Month</Button>
-        </ButtonGroup>
-      </div>
+    
+ 
+
     </>
   )
 }
