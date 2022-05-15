@@ -8,7 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { Link } from 'react-router-dom'
 
 const CurrentValue = () => {
-  const textColor = '#AAA'
+  const textColor = '#000000'
   const [timeMode, setTimeMode] = useState("Reading")
   const dispatch = useDispatch();
   const currentData = useSelector(state => state.currentData)
@@ -45,7 +45,7 @@ const CurrentValue = () => {
     <>
 
       <div className="margin">
-        <h2 className="text-center">Data readings</h2>
+        <h2 className="text-center">Data readings: <u>Currently</u></h2>
         <div className="row d-flex justify-content-center" >
           <div style={{
             width: '500px',
@@ -65,7 +65,7 @@ const CurrentValue = () => {
               endColor="red"
               textColor={textColor}
               labelFontSize={'13px'}
-              valueTextFontSize={'16px'}
+              valueTextFontSize={'20px'}
               currentValueText={`CO2: ${currentData?.currentData?.CO2} ppm`}
               needleTransition="easeElastic"
             />
@@ -90,7 +90,7 @@ const CurrentValue = () => {
               endColor="red"
               textColor={textColor}
               labelFontSize={'13px'}
-              valueTextFontSize={'16px'}
+              valueTextFontSize={'20px'}
               currentValueText={`VOC: ${currentData?.currentData?.VOC} ppb`}
               needleTransition="easeElastic"
             />

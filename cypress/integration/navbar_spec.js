@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe("The navbar", () => {
     it("Routes correctly to the landing page with the logo", () => {
         cy.visit("/about")
