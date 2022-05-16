@@ -45,7 +45,9 @@ const CurrentValue = () => {
     <>
 
       <div className="margin">
-        <h2 className="text-center">Data readings: <u>Currently</u></h2>
+        <h2 className="text-center">Data readings: 
+        <u>Currently</u>
+        </h2>
         <div className="row d-flex justify-content-center" >
           <div style={{
             width: '500px',
