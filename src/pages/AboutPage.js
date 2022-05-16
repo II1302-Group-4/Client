@@ -9,7 +9,7 @@ const AboutPage = () => {
             <h1>
             <center>
             
-                PoluSense
+                PolluSense
             </center>
             </h1>
             
