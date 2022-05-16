@@ -25,15 +25,15 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
-            {loggedIn?
-              <>
+           
+              
               <Route path="/monitor" element={<PresentValue />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/how-to" element={<HowToPage />} />
-              </>
-              :
+              
+              
               <></>
-            }
+            
             
           </Routes>
         </BrowserRouter>

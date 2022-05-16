@@ -29,6 +29,33 @@
 .error {
     color: rgb(231, 23, 23);
 }
+.btn-xl {
+    border: black;
+    background-color: rgb(13, 202, 240);
+    padding: 30px 50px;
+    font-size: 17px;
+    border-radius: 0px;
+    width:100%; 
+    height: 100%;  
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.btn-xl:hover {
+    opacity: 1;
+    background-color: rgb(118, 229, 251);
+    transition: 0.9s;
+}
+
+.btn-xl:focus {
+    background-color: rgb(118, 229, 251);
+    transition: 0.5s;
+}
+
+.btn-xl:active{
+    background-color: rgb(118, 229, 251);
+    transition: 0.9s;
+}
 
 /* 
 body {
@@ -46,6 +73,17 @@ body {
     width: 700px;
     height: 350px;
     position: relative;
+}
+
+.border{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
 }
 
 .p {
@@ -71,5 +109,14 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
-    overflow: hidden;
+}
+
+
+.width{
+    width: 100%;
+}
+
+.margin{
+    margin-top: 42px;
+   
 }

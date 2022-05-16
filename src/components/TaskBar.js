@@ -9,31 +9,34 @@ const TaskBar = () => {
 
     return (
         <>
-            <div className="row p-3 bg-info text-white">
-                <div className="col" >
+       
+            <div className="row bg-info text-white">
+                <div class="col-md-3 p-4" >
                     <Link to="/" id="imgHomeLink">
-                        <h3> <img src={img} width="250" alt="" /> </h3>
+                        <h3> <img src={img} width="260" alt="" /> </h3>
                     </Link>
                 </div>
-                <div className="col-1 p-3">
+                <div class="col-md-2">
                     <Link to="/monitor" id="monitorLink">
-                        <button type="button" className="btn"> <div className="fat" id="test"> Monitor </div></button>
+                        <button className="btn-xl"> <div className="fat" id="test"> Monitor </div></button>
                     </Link>
                 </div>
-                <div className="col-1 p-3">
+                <div class="col-md-2">
                     <Link to="/about" id="aboutLink">
-                        <button type="button" className="btn"><div className="fat"> About </div> </button>
+                        <button className="btn-xl"><div className="fat"> About </div> </button>
                     </Link>
                 </div>
-                <div className="col p-3">
+                <div class="col-md-2">
                     <Link to="/how-to" id="howToLink">
-                        <button type="button" className="btn"><div className="fat"> How to </div></button>
+                        <button className="btn-xl"> <div className="fat">Guide</div></button>
                     </Link>
                 </div>
-                <div className="col-1 p-3">
-                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton"> Log out </button>
+
+                <div class="col-md-3 center">
+                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton margin"> Log out </button>
                 </div>
             </div>
+        
         </>
     )
 }
