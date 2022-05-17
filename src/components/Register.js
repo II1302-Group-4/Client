@@ -19,7 +19,7 @@ const Register = () => {
     return (
         <div className="text-center my-3">
             <div className="d-flex flex-column justify-content-center align-items-center">
-                <input type="email" className="formStyle shadow-sm px-3 mb-4 bg-white rounded" id="InputEmail" placeholder="work email" 
+                <input type="email" className="formStyle shadow-sm px-3 mb-4 bg-white rounded" id="registerEmail" placeholder="work email" 
                     onChange={e => setEmail(e.target.value)}/>
                 <input type="password" className="formStyle shadow-sm px-3 mb-3 bg-white rounded" id="decidePassword" placeholder="password" 
                     onChange={e => setPassword(e.target.value)}/>

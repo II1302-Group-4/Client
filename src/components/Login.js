@@ -22,7 +22,7 @@ const Login = () => {
                     onChange = {e => setEmail(e.target.value)}/>
                 <input type="password" className="formStyle shadow-sm px-3 mb-3 bg-white rounded" id="InputPassword" placeholder="*******" 
                     onChange={e => setPassword(e.target.value)}/>
-                <p className="error">{loginError? <><p>{loginError}</p></> : <></>}</p>
+                <p className="error" id="loginError">{loginError? <><p>{loginError}</p></> : <></>}</p>
                 <button className="btn btn-outline-light" id="loginButton"
                     onClick={() => handleSubmit()}>LOGIN</button>
             </div>
