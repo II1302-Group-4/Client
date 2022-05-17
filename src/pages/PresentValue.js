@@ -16,16 +16,15 @@ const PresentValue = () => {
             <CurrentValue />
 
             :
-  
-            
+
             <HourValue />
    
 }
             <div className="btn-group btn-group-justified d-flex justify-content-center">
              <ButtonGroup aria-label="Basic example">
 
-               <Button onClick={() => setTimeMode("Reading")} variant="secondary">Now</Button>
-               <Button onClick={() => setTimeMode("History")} variant="secondary">Hour</Button>
+               <Button id="now" onClick={() => setTimeMode("Reading")} variant="secondary">Now</Button>
+               <Button id="hour" onClick={() => setTimeMode("History")} variant="secondary">Hour</Button>
 
              </ButtonGroup>
              

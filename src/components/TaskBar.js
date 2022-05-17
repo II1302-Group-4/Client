@@ -12,7 +12,7 @@ const TaskBar = () => {
        
             <div className="row bg-info text-white">
                 <div class="col-md-3 p-4" >
-                    <Link to="/" id="imgHomeLink">
+                    <Link to="/monitor" id="img">
                         <h3> <img src={img} width="260" alt="" /> </h3>
                     </Link>
                 </div>
@@ -27,13 +27,13 @@ const TaskBar = () => {
                     </Link>
                 </div>
                 <div class="col-md-2">
-                    <Link to="/how-to" id="howToLink">
+                    <Link to="/guide" id="guideLink">
                         <button className="btn-xl"> <div className="fat">Guide</div></button>
                     </Link>
                 </div>
 
-                <div class="col-md-3 center">
-                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton margin"> Log out </button>
+                <div class="col-md-3 center"  >
+                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton margin" id="logOutButtonLink"> Log out </button>
                 </div>
             </div>
         
