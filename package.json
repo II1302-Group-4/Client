@@ -35,8 +35,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "set \"CI=false\" && react-scripts build",
-    "eject": "react-scripts eject",
-    // "test": "cross-env CYPRESS_TEST_UID=hnk7eSFtADhugkHJrVMzNdTxaXg2 cypress open"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
