@@ -3,3 +3,5 @@ build
 **/videos
 **/screenshots
 .DS_Store
+serviceAccount.json
+**/*Config.js*
