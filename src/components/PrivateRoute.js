@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { isLoaded, isEmpty } from "react-redux-firebase";
-import {getAuth, onAuthStateChanged} from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // const loggedIn = useSelector(state => !(state.firebase.auth.isEmpty))
 
@@ -18,21 +18,21 @@ import {getAuth, onAuthStateChanged} from "firebase/auth";
 // yet loaded
 const PrivateRoute = () => {
   // TODO: Not working, you can still access the not accessible locations
-//   const auth = useSelector(state => state.firebase.auth.uid);
-//   console.log(auth.uid)
+  //   const auth = useSelector(state => state.firebase.auth.uid);
+  //   console.log(auth.uid)
   //const loggedIn = isLoaded(auth) && !isEmpty(auth);
 
   const auth = getAuth();
   let loggedIn = onAuthStateChanged(auth, (user) => {
-      if (user) {
-          return true;
-      } else {
-          return false;
-      }
+    if (user) {
+      return true;
+    } else {
+      return false;
+    }
   })
 
-  
-  return loggedIn? <Outlet/> : <Navigate to="/" />;
+
+  return loggedIn ? <Outlet /> : <Navigate to="/" />;
 }
 
 export default PrivateRoute;
