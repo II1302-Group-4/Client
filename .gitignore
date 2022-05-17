@@ -3,8 +3,3 @@ build
 **/videos
 **/screenshots
 .DS_Store
-<<<<<<< HEAD
-serviceAccount.json
-**/*Config.js*
-=======
->>>>>>> development

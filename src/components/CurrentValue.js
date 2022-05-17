@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import ReactSpeedometer from "react-d3-speedometer"
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { getCurrentData } from "../redux/actions/currentDataActions"
 import { useDispatch, useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
-import { Link } from 'react-router-dom'
 
 const CurrentValue = () => {
   const textColor = '#000000'
