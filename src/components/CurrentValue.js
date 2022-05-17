@@ -9,17 +9,16 @@ import { Link } from 'react-router-dom'
 
 const CurrentValue = () => {
   const textColor = '#000000'
-  const [timeMode, setTimeMode] = useState("Reading")
   const dispatch = useDispatch();
   const currentData = useSelector(state => state.currentData)
-  
+
   useEffect(() => {
     dispatch(getCurrentData())
   }, [])
 
   if (currentData.loadingCurrentData) {
     return (
-      <div className="margin">
+      <div className="margin" id="loadingIndicator">
         <div className="row d-flex justify-content-center">
           <ClipLoader />
         </div>
@@ -39,72 +38,69 @@ const CurrentValue = () => {
       </div>
     )
   }
-  
 
-  return (
-    <>
+  if (currentData.currentData) {
+    const date = new Date(currentData.currentData.time * 1000).toString().substring(0, 24)
+    return (
+      <>
+        <div className="margin">
+          <h2 className="text-center">Latest data reading: {date}
+          </h2>
+          <div className="row d-flex justify-content-center" >
+            <div style={{
+              width: '500px',
+              height: '300px',
+            }} className=" d-flex justify-content-center">
+              <ReactSpeedometer
+                maxValue={2000}
+                fluidWidth={true}
+                maxSegmentLabels={7}
+                segments={3000}
+                customSegmentStops={[0, 350, 450, 600, 800, 1000, 2000]}
+                segmentColors={['green', 'limegreen', 'gold', 'orange', 'tomato', 'firebrick']}
+                needleHeightRatio={0.8}
+                needleColor="steelblue"
+                value={currentData?.currentData?.CO2}
+                startColor="green"
+                endColor="red"
+                textColor={textColor}
+                labelFontSize={'13px'}
+                valueTextFontSize={'20px'}
+                currentValueText={`CO2: ${currentData?.currentData?.CO2} ppm`}
+                needleTransition="easeElastic"
+              />
+            </div>
 
-      <div className="margin">
-        <h2 className="text-center">Data readings: 
-        <u>Currently</u>
-        </h2>
-        <div className="row d-flex justify-content-center" >
-          <div style={{
-            width: '500px',
-            height: '300px',
-          }} className=" d-flex justify-content-center">
-            <ReactSpeedometer
-              maxValue={2000}
-              fluidWidth={true}
-              maxSegmentLabels={7}
-              segments={3000}
-              customSegmentStops={[0, 350, 450, 600, 800, 1000, 2000]}
-              segmentColors={['green', 'limegreen', 'gold', 'orange', 'tomato', 'firebrick']}
-              needleHeightRatio={0.8}
-              needleColor="steelblue"
-              value={currentData?.currentData?.CO2}
-              startColor="green"
-              endColor="red"
-              textColor={textColor}
-              labelFontSize={'13px'}
-              valueTextFontSize={'20px'}
-              currentValueText={`CO2: ${currentData?.currentData?.CO2} ppm`}
-              needleTransition="easeElastic"
-            />
-          </div>
-
-          <div style={{
-            width: '500px',
-            height: '300px',
-          }} >
-            <ReactSpeedometer
-              maxValue={10000}
-              minValue={0}
-              fluidWidth={true}
-              maxSegmentLabels={4}
-              segments={3000}
-              customSegmentStops={[0, 250, 2000, 10000]}
-              segmentColors={['green', 'gold', 'firebrick']}
-              needleHeightRatio={0.8}
-              needleColor="steelblue"
-              value={currentData?.currentData?.VOC}
-              startColor="green"
-              endColor="red"
-              textColor={textColor}
-              labelFontSize={'13px'}
-              valueTextFontSize={'20px'}
-              currentValueText={`VOC: ${currentData?.currentData?.VOC} ppb`}
-              needleTransition="easeElastic"
-            />
+            <div style={{
+              width: '500px',
+              height: '300px',
+            }} >
+              <ReactSpeedometer
+                maxValue={10000}
+                minValue={0}
+                fluidWidth={true}
+                maxSegmentLabels={4}
+                segments={3000}
+                customSegmentStops={[0, 250, 2000, 10000]}
+                segmentColors={['green', 'gold', 'firebrick']}
+                needleHeightRatio={0.8}
+                needleColor="steelblue"
+                value={currentData?.currentData?.VOC}
+                startColor="green"
+                endColor="red"
+                textColor={textColor}
+                labelFontSize={'13px'}
+                valueTextFontSize={'20px'}
+                currentValueText={`VOC: ${currentData?.currentData?.VOC} ppb`}
+                needleTransition="easeElastic"
+              />
+            </div>
           </div>
         </div>
+      </>
+    )
+  }
 
-      </div>
-    
- 
-
-    </>
-  )
 }
 export default CurrentValue
 
