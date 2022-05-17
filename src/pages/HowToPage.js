@@ -6,7 +6,8 @@ const HowToPage = () => {
             <>
             
                 <TaskBar />
-                
+                <div className="margin">
+                    
             <center>
                 <h2> To view the pollution levels </h2>
             </center>
@@ -26,7 +27,7 @@ const HowToPage = () => {
             
             <center> 1. Select the <b> Log out </b> button on the top right. </center>
             <center> 2. You will be taken to the login page where you can <b> log in</b>. </center>
-                
+            </div>
             </>
         )
 }

@@ -5,13 +5,13 @@ const AboutPage = () => {
     return (
             <>
                 <TaskBar />
-                
-            <h1>
+           <div className='margin'>
+            <h2 >
             <center>
             
                 PolluSense
             </center>
-            </h1>
+            </h2>
             
             <center>
                 An innovative solution for indoor office space climate monitoring.
@@ -30,7 +30,7 @@ const AboutPage = () => {
             </center>
             
             
-                
+            </div>
                 
                 
             </>

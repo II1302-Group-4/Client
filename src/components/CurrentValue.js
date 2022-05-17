@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const CurrentValue = () => {
   const textColor = '#000000'
-  const [timeMode, setTimeMode] = useState("Reading")
+
   const dispatch = useDispatch();
   const currentData = useSelector(state => state.currentData)
   
@@ -98,11 +98,7 @@ const CurrentValue = () => {
             />
           </div>
         </div>
-
       </div>
-    
- 
-
     </>
   )
 }

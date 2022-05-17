@@ -71,17 +71,11 @@ const data2 = {
             <Line data={data}/>
            
             <Line data={data2}/>
-            
            </div>
-           
         </div>
-        
     </div>
 
-  
   </>
   )
-
-
   }
 export default HourValue

@@ -29,7 +29,7 @@ const App = () => {
               <>
               <Route path="/monitor" element={<PresentValue />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/how-to" element={<HowToPage />} />
+              <Route path="/guide" element={<HowToPage />} />
               </>
               :
               <></>
