@@ -1,6 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyA4DZ4nGUWqOx7pMtYIMQid-H-7TBpeqSo",
   authDomain: "pollusense-3c51b.firebaseapp.com",

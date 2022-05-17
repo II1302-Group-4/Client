@@ -4,9 +4,10 @@ import { useSelector } from "react-redux";
 import { isLoaded, isEmpty } from "react-redux-firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-// const loggedIn = useSelector(state => !(state.firebase.auth.isEmpty))
 
 // const PrivateRoute = ({ children }) => {
+//   const loggedIn = useSelector(state => !(state.firebase.auth.isEmpty))
+
 //   if (!loggedIn) {
 //     return <Navigate to="/" replace />;
 //   }
