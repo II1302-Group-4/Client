@@ -27,7 +27,7 @@ const App = () => {
               <Route exact path="/" element={<LandingPage />} />
               <Route path="/monitor" element={<Navigate to="/" />} />
               <Route path="/about" element={<Navigate to="/" />} />
-              <Route path="/how-to" element={<Navigate to="/" />} />
+              <Route path="/guide" element={<Navigate to="/" />} />
             </Routes>
           </BrowserRouter>
         </div>
@@ -46,7 +46,7 @@ const App = () => {
               <Route exact path="/" element={<Navigate to="/monitor" />} />
               <Route exact path="/monitor" element={<PresentValue />} />
               <Route exact path="/about" element={<AboutPage />} />
-              <Route exact path="/how-to" element={<HowToPage />} />
+              <Route exact path="/guide" element={<HowToPage />} />
             </Routes>
           </BrowserRouter>
         </div>

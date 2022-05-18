@@ -9,7 +9,6 @@ const TaskBar = () => {
 
     return (
         <>
-       
             <div className="row bg-info text-white">
                 <div class="col-md-3 p-4" >
                     <Link to="/monitor" id="img">
