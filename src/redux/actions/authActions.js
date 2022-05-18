@@ -33,7 +33,7 @@ export const signUp = (email, password) => {
         if(split[1] !== "kth.se") {
             dispatch({
                 type: "signupError",
-                payload: "Register with username@kth.se"})
+                payload: "Please register with your @kth.se mail domain"})
             return
         }
         const firebase = getFirebase()
