@@ -96,7 +96,11 @@ body {
 }
 
 .margin {
-    margin-top: 80px;
+    margin-top: 90px;
+}
+
+.margin2 {
+    margin-top: 60px;
 }
 
 .fat {
@@ -116,7 +120,7 @@ body {
     width: 100%;
 }
 
-.margin{
-    margin-top: 42px;
+.margin3{
+    margin-top: 43px;
    
 }

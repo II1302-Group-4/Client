@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { getTwentyFourHoursData } from '../redux/actions/historicDataActions'
 import { useDispatch, useSelector } from 'react-redux'
@@ -84,9 +83,9 @@ const HourValue = () => {
 
       <div className="margin">
         <h2 className="text-center">Data readings: Last 24 hours </h2>
-
+        <p className="margin2"> </p>
         <div className="row d-flex justify-content-center" >
-          <div style={{
+          <div id="style" style={{
             width: '600px',
             height: '300px',
           }} className=" d-flex justify-content-center">

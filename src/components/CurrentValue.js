@@ -45,6 +45,7 @@ const CurrentValue = () => {
         <div className="margin">
           <h2 className="text-center">Latest data reading: {date}
           </h2>
+          <p className="margin2"> </p>
           <div className="row d-flex justify-content-center" >
             <div style={{
               width: '500px',
