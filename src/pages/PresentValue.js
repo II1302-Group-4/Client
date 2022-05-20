@@ -5,7 +5,6 @@ import HourValue from '../components/HourValue'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
-
 const PresentValue = () => {
     const [timeMode, setTimeMode] = useState("Reading")
     return (
