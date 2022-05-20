@@ -9,7 +9,6 @@ const TaskBar = () => {
 
     return (
         <>
-       
             <div className="row bg-info text-white">
                 <div class="col-md-3 p-4" >
                     <Link to="/monitor" id="img">
@@ -33,7 +32,7 @@ const TaskBar = () => {
                 </div>
 
                 <div class="col-md-3 center"  >
-                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton margin" id="logOutButtonLink"> Log out </button>
+                    <button onClick={() => dispatch(signOut())} type="button" className="btn btn-outline-dark logInButton margin3" id="logOutButtonLink"> Log out </button>
                 </div>
             </div>
         
