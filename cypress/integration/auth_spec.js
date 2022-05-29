@@ -29,16 +29,19 @@ describe("Routing, for unauthorized users", () => {
     it("Denied access to monitor", () => {
         cy.visit("/monitor");
         cy.get("h2").should("contain", "fast and simple")
+        cy.url().should("eq", "http://localhost:3000/");
     })
 
     it("Denied access to about", () => {
         cy.visit("/about");
         cy.get("h2").should("contain", "fast and simple")
+        cy.url().should("eq", "http://localhost:3000/");
     })
 
     it("Denied access to guide", () => {
         cy.visit("/guide");
         cy.get("h2").should("contain", "fast and simple")
+        cy.url().should("eq", "http://localhost:3000/");
     })
 })
 
