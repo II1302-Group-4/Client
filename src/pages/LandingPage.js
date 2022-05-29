@@ -2,12 +2,9 @@ import React, {useState} from 'react'
 import Logo from '../components/Logo'
 import Login from '../components/Login'
 import Register from '../components/Register'
-import { Link } from 'react-router-dom'
-
 const LandingPage = () => {
     const [formMode, setFormMode] = useState("Login")
     return (
-
         <>
             <div className="d-flex flex-column justify-content-center align-items-center image">
                 <Logo />
@@ -22,10 +19,8 @@ const LandingPage = () => {
                         <button onClick={() => setFormMode("Login")} className="btn btn-link link-light">Login</button>
                     </div>
                 }
-
             </div>
         </>
     )
 }
-
 export default LandingPage

@@ -14,10 +14,7 @@ export const signIn = (email, password) => {
 }
 
 export const signUp = (email, password) => {
-    
-
     return (dispatch, getState, { getFirebase }) => {
-
         const split = email.split("@")
         if(split[1] !== "kth.se") {
             dispatch({
@@ -26,14 +23,14 @@ export const signUp = (email, password) => {
             return
         }
         const firebase = getFirebase()
-        
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(() => {
                 window.location.pathname = "/monitor"
             })
             .catch(e => {
-                dispatch({ type: "signupError", 
-                payload: e.message })
+                dispatch({ 
+                    type: "signupError", 
+                    payload: e.message })
             })
     }
 }
@@ -46,7 +43,9 @@ export const signOut = () => {
                 window.location.pathname = "/"
             })
             .catch(e => {
-                dispatch({ type: "signoutError", payload: e.message })
+                dispatch({ 
+                    type: "signoutError", 
+                    payload: e.message })
             })
     }
 }
