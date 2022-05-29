@@ -67,15 +67,6 @@
     transition: 0.9s;
 }
 
-/* 
-body {
-    margin: 0;
-    background: #152B39;
-    font-family: Courier, monospace;
-    font-size: 14px;
-    color: #ccc;
-} */
-
 .wrapper {
     display: block;
     margin: 5em auto;
@@ -126,3 +117,11 @@ body {
     margin-top: 43px;
    
 }
+/* 
+body {
+    margin: 0;
+    background: #152B39;
+    font-family: Courier, monospace;
+    font-size: 14px;
+    color: #ccc;
+} */
